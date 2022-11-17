@@ -1,3 +1,4 @@
+const eqArrays = require("./eqArrays");
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -6,16 +7,6 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const eqArrays = function(arr1,arr2) {
-  let i=0
-  while(i < arr1.length || i < arr2.length){
-    if(arr1[i] !== arr2[i]){
-      return false;
-    }
-    i++;
-  }
-  return true;
-};
 
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!

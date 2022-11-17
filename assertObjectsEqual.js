@@ -1,13 +1,4 @@
-const eqArrays = function(arr1,arr2) {
-  let i=0
-  while(i < arr1.length || i < arr2.length){
-    if(arr1[i] !== arr2[i]){
-      return false;
-    }
-    i++;
-  }
-  return true;
-};
+const eqArrays = require("./eqArrays");
 
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
