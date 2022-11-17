@@ -19,15 +19,20 @@ const letterPositions = function(sentence) {
   const results = {};
   let i=0;
   for (const s of sentence.split(" ").join("")) {
-    results[s] = !results[s] ? [i] : results[s].push(i);
+    if(!results[s]){
+      results[s] = [i];
+    }
+    else{
+      results[s].push(i);
+    }
     i++;
   }
   return results;
 };
 
 const r = letterPositions("hello");
-console.log(assertArraysEqual(r['h'],[0]));
-console.log(assertArraysEqual(r['e'],[1]));
-console.log(assertArraysEqual(r['l'],[2,3]));
-console.log(assertArraysEqual(r['o'],[4]));
+assertArraysEqual(r['h'],[0]);
+assertArraysEqual(r['e'],[1]);
+assertArraysEqual(r['l'],[2,3]);
+assertArraysEqual(r['o'],[4]);
 
