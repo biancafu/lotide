@@ -1,11 +1,5 @@
 const eqArrays = require("./eqArrays");
 
-
-function assertArraysEqual(arr1,arr2){
-  const message = eqArrays(arr1,arr2)?`✅✅✅ Assertion Passed [${arr1}] === [${arr2}]` : `🛑🛑🛑 Assertion Failed [${arr1}] !== [${arr2}]`;
-  console.log(message);
-};
-
 const middle = function(arr) {
   if (arr.length === 0 || arr.length === 1) {
     return [];
@@ -19,7 +13,4 @@ const middle = function(arr) {
 };
 
  
-
-assertArraysEqual(middle([1, 2, 3]),[2]); // => [2])
-assertArraysEqual(middle([1, 2, 3, 4]),[2,3]) // => [2, 3]
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]),[3,4]) // => [3, 4]
+module.exports = middle;
