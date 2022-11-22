@@ -1,6 +1,6 @@
 
 const countLetters = function(string) {
-  let result = {};
+  let results = {};
   const noSpace = string.split(" ").join("");
   for (const letter of noSpace) {
     //if result is undefined, assign it to 1. otherwise add 1
@@ -8,12 +8,12 @@ const countLetters = function(string) {
     // result[s] = !result[s] ? 1 : result[s] + 1;
 
     //professional coding
-    if (result[letter] === undefined) {
-      result[letter] = 0;
+    if (results[letter] === undefined) {
+      results[letter] = 0;
     }
-    result[letter]++;
+    results[letter]++;
   }
-  return result;
+  return results;
 };
 
 console.log(countLetters("lighthouse in the house"));
