@@ -1,13 +1,8 @@
-const eqArrays = require("./eqArrays");
-const {assertEqual} = require("./assertEqual");
-
 
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
   //recursion
-  console.log(object1,object2);
-  console.log(Object.keys(object1).length !== Object.keys(object2).length);
   if (Object.keys(object1).length !== Object.keys(object2).length) return false;
   for (const key in object1) {
     if (typeof object1[key] === 'object' && !Array.isArray(object1[key]) && (typeof object2[key] === 'object' && !Array.isArray(object2[key]))) {
@@ -24,8 +19,6 @@ const eqObjects = function(object1, object2) {
   }
   return true;
 
-
-
   // if (Object.keys(object1).length !== Object.keys(object2).length) return false;
   // for (const o in object1) {
   //   if (Array.isArray(object1[o])){
@@ -37,14 +30,4 @@ const eqObjects = function(object1, object2) {
   // return true;
 };
 
-// => true
-const result = eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 });
-assertEqual(result,true);
-assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false);// => false
-assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }) ,false );// => false
-// const cd = { c: "1", d: ["2", 3] };
-// const dc = { d: ["2", 3], c: "1" };
-// assertEqual(eqObjects(cd, dc),true); // => true
-
-// const cd2 = { c: "1", d: ["2", 3, 4] };
-// assertEqual(eqObjects(cd, cd2),false); // => false
+module.exports = eqObjects;
