@@ -1,13 +1,13 @@
 const {assertArraysEqual} = require('./assertArraysEqual');
 
-const without = function (source,itemToRemove){
-  result=[];
+const without = function (source, itemToRemove){
+  let results = [];
   for (const s of source) {
     if(itemToRemove.indexOf(s) === -1) {
-      result.push(s);
+      results.push(s);
     }
   }
-  return result;
+  return results;
 }
 
 const words = ["hello", "world", "lighthouse"];
