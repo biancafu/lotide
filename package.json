@@ -1,6 +1,6 @@
 {
   "name": "@biancafu/lotide",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "lotide project created by @biancafu during LightHouse Lab bootcamp",
   "main": "assertArraysEqual.js",
   "directories": {
