@@ -16,7 +16,6 @@ const eqArrays = function(arr1,arr2) {
     }
   }
   return true;
-
   //my previous code
   // let i=0
   // while(i < arr1.length){
